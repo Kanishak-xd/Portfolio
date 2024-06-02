@@ -10,8 +10,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Add padding to prevent overlap */
+    padding-top: 100px;
 }
+
+/* Navigation Bar */
 header {
     position: fixed;
     top: 0;
@@ -20,8 +22,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
     background-color: transparent;
+    z-index: 100;
 }
 .logo {
     font-size: 2em;
@@ -51,6 +53,9 @@ header {
 .navigation a:hover {
     color: #7d2ae8;
 }
+
+
+/* Home Section */
 .home {
     width: 100%;
     height: 100px;
@@ -80,7 +85,9 @@ header {
     margin-top: 0px;
     opacity: 55%;
 }
-/* New Projects Section */
+
+
+/* Projects Section */
 .projects {
     width: 100%;
     display: flex;
@@ -99,7 +106,7 @@ header {
     letter-spacing: 0px;
     margin: 40px 0 0 0;
     text-align: left;
-    padding-right: 910px; /* Adjust this value to move the text more to the right */
+    padding-right: 910px;
 }
 .projects_frame {
     width: 100%;
@@ -162,6 +169,8 @@ header {
     font-size: 20px;
     color: #737373;
 }
+
+
 /* Experience Section */
 .Experience-Title {
     background: linear-gradient(243deg, #5d69be 50%, #c89feb);
@@ -207,6 +216,9 @@ header {
     font-size: 18px;
     color: #737373;
 }
+
+
+/* More Section */
 .More {
     width: 100%;
     display: flex;
@@ -214,7 +226,6 @@ header {
     align-items: center;
     padding: 10px 0px;
 }
-
 .More-Title {
     background: linear-gradient(243deg, #5d69be 50%, #c89feb);
     -webkit-background-clip: text;
@@ -228,7 +239,6 @@ header {
     text-align: left;
     padding-right: 1080px;
 }
-
 .More-Container {
     display: flex;
     justify-content: center;
@@ -236,7 +246,6 @@ header {
     flex-wrap: wrap;
     margin-top: 10px;
 }
-
 .More-box1,
 .More-box2,
 .More-box3 {
@@ -248,7 +257,6 @@ header {
     box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
-
 .More-box1 .More-title,
 .More-box2 .More-title,
 .More-box3 .More-title {
@@ -263,6 +271,9 @@ header {
     font-size: 18px;
     color: #737373;
 }
+
+
+/* Footer Section */
 .footer {
     background-color: #000;
     color: #fff;
@@ -294,7 +305,6 @@ header {
 }
 
 
-
 /* Text Selection Color */
 ::selection {
     background: #9195F6;
@@ -308,26 +318,27 @@ header {
     background: #9195F6;
 }
 
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 10px; /* Adjust the height as needed */
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
     background-color: #f3f3f3;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px; /* Rounded corners */
-    background: linear-gradient(#fa90b6, #a48df2); /* Gradient background */
-    border: 1px solid #000000; /* Add border */
+    border-radius: 10px;
+    background: linear-gradient(#fa90b6, #a48df2);
+    border: 1px solid #000000;
 }
 
 
-/*Take to the Top Button*/
+/* Take to the Top Button */
 #toTheTopButton {
     display: none;
     width: 65px;
@@ -344,13 +355,13 @@ header {
     border-radius: 9%;
     transition: 0.3s;
 }
-
 #toTheTopButton:hover {
     transform: translate(0, -10px);
     background-color: #9195F6;
 }
 
-/*Box hover effects*/
+
+/* Boxes' Hover Effects */
 .project_box1, .project_box2 {
     transition: 0.3s;
 }
@@ -372,3 +383,131 @@ header {
     transform: translate(0, -15px);
 }
 
+@media only screen and (max-width: 600px) {
+
+
+/* Top Navigation Bar */
+header{
+    background-color: white;
+}
+
+
+/* Home Section */
+.body, .home, .content, .loc{
+    margin-left: 20px;
+}
+
+
+/* Projects Section */
+.Projects-Title {
+    font-size: 50px;
+    text-align: left;
+    padding: 0px 350px 0px 0px;
+    margin: 100px 0px 0px 35px;
+}
+.projects_frame {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* Experience Section */
+.Experience-Title {
+    font-size: 75px;
+    margin-left: 35px;
+}
+.Experience-Container {
+    gap: 25px;
+}
+.Exp1_box,
+.Exp2_box,
+.Exp3_box {
+    width: 99%;
+    max-width: 1500px;
+    padding: 20px;
+}
+.Exp1_box .Exp1_title,
+.Exp2_box .Exp2_title,
+.Exp3_box .Exp3_title {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.Exp1_box img,
+.Exp2_box img,
+.Exp3_box img {
+    width: 533px;
+    height: 320px;
+}
+
+
+/* More Section */
+.More-Title {
+    font-size: 75px;
+    margin-left: 35px;
+    padding: 0px 395px 0px 0px;
+    margin: 100px 0px 0px 35px;
+}
+.More-Container {
+    gap: 25px;
+}
+.More-box1, .More-box2, .More-box3 {
+    width: 99%;
+    max-width: 1500px;
+    padding: 20px;
+    margin-left: 0px;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.More-box1 img,
+.More-box2 img,
+.More-box3 img {
+    width: 533px;
+    height: 320px;
+}
+.More-box1 .More-description,
+.More-box2 .More-description,
+.More-box3 .More-description {
+    max-width: 400px;
+}
+
+
+/* Footer Section */
+.footer-content {
+    margin-left: 25px;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 370px) {
+       
+    /* Projects Section */
+    .Projects-Title {
+        padding: 100px 180px 0px 0px;
+        margin: 100px 0px 0px 35px;
+    }
+    
+    
+    /* Experience Section */
+    .Experience-Title {
+        margin-left: 128px;
+    }
+      
+    
+    /* More Section */
+    .More-Title {
+        margin-left: 35px;
+        padding: 0px 220px 0px 0px;
+        margin: 100px 0px 0px 35px;
+    }
+    
+    
+    /* Footer Section */
+    .footer-content {
+        margin-left: 25px;
+    }
+    
+}
