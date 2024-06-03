@@ -20,3 +20,21 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, Internet Explorer and Opera
 }
+
+
+// Announcement Strip
+document.addEventListener("DOMContentLoaded", function() {
+  const announcementDiv = document.getElementById('announcement');
+  const closeButton = document.getElementById('close-btn');
+  
+  // Check if the announcement should be hidden for the current session
+  if (sessionStorage.getItem('announcementClosed') === 'true') {
+      announcementDiv.style.display = 'none';
+  }
+
+  // Announcement Close Button
+  closeButton.addEventListener('click', function() {
+      announcementDiv.style.display = 'none';
+      sessionStorage.setItem('announcementClosed', 'true');
+  });
+});
