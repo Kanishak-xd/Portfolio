@@ -12,6 +12,45 @@ body {
     align-items: center;
     padding-top: 100px;
 }
+/* Announcement Bar */
+.announcement {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(243deg,#FDB99B, #CF8BF3, #A770EF);
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 540;
+    margin: 0;
+    padding: 0.3em 0em 0.3em 0em;
+    vertical-align: middle;
+    font-size: 1em;
+    position: relative; /* Needed to position the close button correctly */
+}
+.announcement p{
+    width:22%;
+    margin-left: 45em;
+}
+.announcement p:hover { 
+    color: black; 
+}
+
+.close-btn {
+    position: absolute;
+    right: 25px;
+    top: 2px;;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: black;
+}
+
 
 /* Navigation Bar */
 header {
@@ -183,6 +222,7 @@ header {
     letter-spacing: 0px;
     margin-top: 0px;
     text-align: left;
+    margin-left: 16px;
 }
 .Experience-Container {
     display: flex;
@@ -190,6 +230,11 @@ header {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 0px;
+}
+.exp1_frame, 
+.exp2_frame, 
+.exp3_frame{
+    text-decoration: none;
 }
 .Exp1_box,
 .Exp2_box,
@@ -245,6 +290,11 @@ header {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 10px;
+}
+.box1_frame,
+.box2_frame,
+.box3_frame{
+    text-decoration: none;
 }
 .More-box1,
 .More-box2,
@@ -386,122 +436,89 @@ header {
 @media only screen and (max-width: 600px) {
 
 
-/* Top Navigation Bar */
-header{
-    background-color: white;
-}
-
-
-/* Home Section */
-.body, .home, .content, .loc{
-    margin-left: 20px;
-}
-
-
-/* Projects Section */
-.Projects-Title {
-    font-size: 50px;
-    text-align: left;
-    padding: 0px 350px 0px 0px;
-    margin: 100px 0px 0px 35px;
-}
-.projects_frame {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-
-
-/* Experience Section */
-.Experience-Title {
-    font-size: 75px;
-    margin-left: 35px;
-}
-.Experience-Container {
-    gap: 25px;
-}
-.Exp1_box,
-.Exp2_box,
-.Exp3_box {
-    width: 99%;
-    max-width: 1500px;
-    padding: 20px;
-}
-.Exp1_box .Exp1_title,
-.Exp2_box .Exp2_title,
-.Exp3_box .Exp3_title {
-    font-size: 28px;
-    margin-bottom: 5px;
-}
-.Exp1_box img,
-.Exp2_box img,
-.Exp3_box img {
-    width: 533px;
-    height: 320px;
-}
-
-
-/* More Section */
-.More-Title {
-    font-size: 75px;
-    margin-left: 35px;
-    padding: 0px 395px 0px 0px;
-    margin: 100px 0px 0px 35px;
-}
-.More-Container {
-    gap: 25px;
-}
-.More-box1, .More-box2, .More-box3 {
-    width: 99%;
-    max-width: 1500px;
-    padding: 20px;
-    margin-left: 0px;
-    font-size: 28px;
-    margin-bottom: 5px;
-}
-.More-box1 img,
-.More-box2 img,
-.More-box3 img {
-    width: 533px;
-    height: 320px;
-}
-.More-box1 .More-description,
-.More-box2 .More-description,
-.More-box3 .More-description {
-    max-width: 400px;
-}
-
-
-/* Footer Section */
-.footer-content {
-    margin-left: 25px;
-}
-
-
-}
-
-
-
-@media only screen and (max-width: 370px) {
-       
+    /* Top Navigation Bar */
+    header{
+        background-color: white;
+    }
+    
+    
+    /* Home Section */
+    .body, .home, .content, .loc{
+        margin-left: 20px;
+    }
+    
+    
     /* Projects Section */
     .Projects-Title {
-        padding: 100px 180px 0px 0px;
+        font-size: 50px;
+        text-align: left;
+        padding: 0px 350px 0px 0px;
         margin: 100px 0px 0px 35px;
+    }
+    .projects_frame {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
     
     
     /* Experience Section */
     .Experience-Title {
-        margin-left: 128px;
+        font-size: 75px;
+        margin-left: 35px;
     }
-      
+    .Experience-Container {
+        gap: 25px;
+    }
+    .Exp1_box,
+    .Exp2_box,
+    .Exp3_box {
+        width: 99%;
+        max-width: 1500px;
+        padding: 20px;
+    }
+    .Exp1_box .Exp1_title,
+    .Exp2_box .Exp2_title,
+    .Exp3_box .Exp3_title {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .Exp1_box img,
+    .Exp2_box img,
+    .Exp3_box img {
+        width: 533px;
+        height: 320px;
+    }
+    
     
     /* More Section */
     .More-Title {
+        font-size: 75px;
         margin-left: 35px;
-        padding: 0px 220px 0px 0px;
+        padding: 0px 395px 0px 0px;
         margin: 100px 0px 0px 35px;
+    }
+    .More-Container {
+        gap: 25px;
+    }
+    .More-box1, .More-box2, .More-box3 {
+        width: 99%;
+        max-width: 1500px;
+        padding: 20px;
+        margin-left: 0px;
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .More-box1 img,
+    .More-box2 img,
+    .More-box3 img {
+        width: 533px;
+        height: 320px;
+    }
+    .More-box1 .More-description,
+    .More-box2 .More-description,
+    .More-box3 .More-description {
+        max-width: 400px;
     }
     
     
@@ -510,4 +527,37 @@ header{
         margin-left: 25px;
     }
     
-}
+    
+    }
+    
+    
+    
+    @media only screen and (max-width: 370px) {
+           
+        /* Projects Section */
+        .Projects-Title {
+            padding: 100px 180px 0px 0px;
+            margin: 100px 0px 0px 35px;
+        }
+        
+        
+        /* Experience Section */
+        .Experience-Title {
+            margin-left: 128px;
+        }
+          
+        
+        /* More Section */
+        .More-Title {
+            margin-left: 35px;
+            padding: 0px 220px 0px 0px;
+            margin: 100px 0px 0px 35px;
+        }
+        
+        
+        /* Footer Section */
+        .footer-content {
+            margin-left: 25px;
+        }
+        
+    }
