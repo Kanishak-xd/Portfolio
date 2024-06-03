@@ -561,17 +561,3 @@ header {
         }
         
     }
-
-
-@media only screen and (max-width: 390px) {
-
-/* Announcement Bar */
-.announcement p{
-    width:100%;
-    margin-left: 0em;
-}
-.close-btn {
-    color: transparent;
-}
-
-}
