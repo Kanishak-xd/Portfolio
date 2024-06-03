@@ -26,7 +26,7 @@ body {
     padding: 0.3em 0em 0.3em 0em;
     vertical-align: middle;
     font-size: 1em;
-    position: relative; /* Needed to position the close button correctly */
+    position: relative;
 }
 .announcement p{
     width:22%;
