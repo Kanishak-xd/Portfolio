@@ -14,7 +14,9 @@ body {
 }
 /* Announcement Bar */
 .announcement {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     text-align: center;
     width: 100%;
@@ -23,23 +25,20 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 540;
     margin: 0;
-    padding: 0.3em 0em 0.3em 0em;
+    padding: 0em 0em 0.3em 0em;
     vertical-align: middle;
     font-size: 1em;
     position: relative;
 }
-.announcement p{
-    width:22%;
-    margin-left: 45em;
+.announcement p {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
 }
-.announcement p:hover { 
-    color: black; 
-}
-
 .close-btn {
     position: absolute;
     right: 25px;
-    top: 2px;;
     background: none;
     border: none;
     font-size: 20px;
@@ -59,7 +58,7 @@ header {
     width: 100%;
     padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     background-color: transparent;
     z-index: 100;
@@ -433,149 +432,412 @@ header {
     transform: translate(0, -15px);
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 360px) and (max-width: 445px) {
+
+    html {
+        overflow-x: hidden;
+      }
 
 
-    /* Top Navigation Bar */
+    /* Body */
+    body{
+        padding-top: 8vh;
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+        /* width:76vw; */
+    }
+
+
+    /* Navigation Bar */
     header{
+        width: 100%;
+        /* width: 76vw; */
+        height: 7vh;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
         background-color: white;
     }
-    
-    
-    /* Home Section */
-    .body, .home, .content, .loc{
-        margin-left: 20px;
+    .logo{
+        font-size: 1em;
+        font-weight: 700;
+        padding-left: 3%;
+        margin-left: 0%;
+        padding-right: 0px;
+        margin-right: 0px;
+        line-height: 1em;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
     }
-    
-    
+    .navigation {
+        padding-left: 0px;
+        padding-right: 0%;
+        padding-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 3%;
+        gap: 10px;
+        margin-bottom: 0px;
+    }
+    .navigation a {
+        font-size: 80%;
+        font-weight: 300;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+
+
+    /* Announcement Bar */
+    .announcement {
+        width:100%;
+        font-size: 68%;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-left: 0em;
+        height: 20px;
+    }
+    .announcement p{
+        max-inline-size: 100%;
+        width:70%;
+        margin-left: 0em;
+        margin-top: 3px;
+        text-align: center;
+        position: relative;
+        animation: move-words 7s linear infinite;
+    }
+    @keyframes move-words {
+        0% {
+          left: 100%;
+        }
+        100% {
+          left: -100%;
+        }
+    }
+    .close-btn {
+        opacity: 0%;
+        top:1px;
+        right:45px;
+        font-size: 13px;
+    }
+
+
+    /* Home Section */
+    .home {
+        max-width: 100%;
+        width: 100%;
+        /* width: 76vw; */
+        height: 15vh;
+        padding: 0% 2% 0% 5%;
+        margin: 16% 0% 0% 0%;
+    }
+    .content {
+        max-width: 100%;
+        width: 100%;
+        /* width: 76vw; */
+        height: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+    }
+    .content h1{
+        max-width: 100%;
+        width: 100%;
+        /* width: 76vw; */
+        height: 25%;
+        font-size: 150%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+    }
+    .content h2{
+        max-width: 100%;
+        width: 100%;
+        /* width: 76vw; */
+        height: 100%;
+        font-size: 120%;
+        font-weight: 550;
+        padding: 1% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+    }
+    .loc {
+        height: 5vh;
+    }
+    .loc p{
+        max-width: 100%;
+        width: 100%;
+        /* width: 76vw; */
+        height: 100%;
+        font-size: 100%;
+        font-weight: 300;
+        padding: 5% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+        opacity: 60%;
+    }
+
+
     /* Projects Section */
+    .projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+        padding: 30% 2.5% 0% 2.5%;
+    }
     .Projects-Title {
-        font-size: 50px;
-        text-align: left;
-        padding: 0px 350px 0px 0px;
-        margin: 100px 0px 0px 35px;
+        font-size: 260%;
+        padding: 10% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
     }
     .projects_frame {
+        /* max-width: 75vw; */
+        max-width: 100%;
+        width: 100%;
+        max-height: 1000px;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+        display: flexbox;
+        align-items:center;
+        justify-content: center;
         flex-direction: column;
-        align-items: center;
-        gap: 25px;
     }
-    
-    
+    .project_frame1,
+    .project_frame2 {
+        width: 100%;
+        height: 50%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+        align-items: center;
+    }
+    .project_frame1{
+        padding-top: 5%;
+    }
+    .project_frame2{
+        padding-top: 0%;
+        margin-top: 0%;
+    }
+    .project_box1,
+    .project_box2 {
+        width: 100%;
+        height: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+    }
+    .project_box1 img,
+    .project_box2 img{
+        padding: 3% 2% 0% 2%;
+        width: 100%;
+        height: 30%;
+    }
+    .aquasol_text, 
+    .aquasol_text_heading,
+    .aquasol_text_description {
+        padding-left: 3%;
+    }
+    .aquasol_text {
+        font-size: 170%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+    .aquasol_text_heading{
+        font-size: 87%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+    .aquasol_text_description{
+        font-size:72%;
+        margin-top: 1.5%;
+        margin-bottom: 5%;
+    }
+    .project2_text,
+    .project2_text_heading,
+    .project2_text_description{
+        padding-left: 3%;
+    }
+    .project2_text{
+        font-size: 170%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+    .project2_text_heading{
+        font-size: 87%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+    }
+    .project2_text_description{
+        font-size:72%;
+        margin-top: 1.5%;
+        margin-bottom: 5%;
+    }
+
+
     /* Experience Section */
-    .Experience-Title {
-        font-size: 75px;
-        margin-left: 35px;
+    .Experience-Title{
+        font-size: 260%;
+        padding: 15% 0% 0% 3%;
+        margin: 0% 0% 0% 0%;
     }
     .Experience-Container {
-        gap: 25px;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        padding: 0% 2.5% 0% 2.5%;
+        margin: 0% 0% 0% 0%;
     }
     .Exp1_box,
     .Exp2_box,
     .Exp3_box {
-        width: 99%;
-        max-width: 1500px;
-        padding: 20px;
-    }
-    .Exp1_box .Exp1_title,
-    .Exp2_box .Exp2_title,
-    .Exp3_box .Exp3_title {
-        font-size: 28px;
-        margin-bottom: 5px;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
     }
     .Exp1_box img,
     .Exp2_box img,
     .Exp3_box img {
-        width: 533px;
-        height: 320px;
+        width: 100%;
+        padding: 3% 2% 0% 2%;
     }
-    
-    
+    .Exp1_box .Exp1_title,
+    .Exp2_box .Exp2_title,
+    .Exp3_box .Exp3_title {
+        font-size: 140%;
+    }
+    .Exp1_box .Exp1_description,
+    .Exp2_box .Exp2_description,
+    .Exp3_box .Exp3_description {
+        font-size: 95%;
+        padding-bottom: 4%;
+    }
+    .Exp1_box .Exp1_title,
+    .Exp2_box .Exp2_title,
+    .Exp3_box .Exp3_title,
+    .Exp1_box .Exp1_description,
+    .Exp2_box .Exp2_description,
+    .Exp3_box .Exp3_description {
+        padding-left: 3%;
+    }
+
+
     /* More Section */
+    .More {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        flex-wrap: wrap;
+        padding: 0% 2.5% 0% 2.5%;
+        margin: 0% 0% 0% 0%;
+    }
     .More-Title {
-        font-size: 75px;
-        margin-left: 35px;
-        padding: 0px 395px 0px 0px;
-        margin: 100px 0px 0px 35px;
+        width: 97%;
+        /* width: 97.5vw; */
+        height: 100%;
+        font-size: 260%;
+        padding: 15% 0% 5% 3%;
+        margin: 0% 0% 0% 0%;
     }
     .More-Container {
-        gap: 25px;
+        /* max-width: 75vw; */
+        width: 100%;
+        max-width: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+        display: flex;
+        align-items:unset;
+        justify-content: unset;
+        gap: 15px;
+        flex-direction: row;
     }
-    .More-box1, .More-box2, .More-box3 {
-        width: 99%;
-        max-width: 1500px;
-        padding: 20px;
-        margin-left: 0px;
-        font-size: 28px;
-        margin-bottom: 5px;
+    .More-box1,
+    .More-box2,
+    .More-box3 {
+        width: 100%;
+        height: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
     }
     .More-box1 img,
     .More-box2 img,
     .More-box3 img {
-        width: 533px;
-        height: 320px;
+        width: 100%;
+        padding: 3% 2% 0% 2%;
+    }
+    .More-box1 .More-title,
+    .More-box2 .More-title,
+    .More-box3 .More-title,
+    .More-box1 .More-description,
+    .More-box2 .More-description,
+    .More-box3 .More-description {
+        padding-left: 3%;
+    }
+    .More-box1 .More-title,
+    .More-box2 .More-title,
+    .More-box3 .More-title {
+        font-size: 140%;
     }
     .More-box1 .More-description,
     .More-box2 .More-description,
     .More-box3 .More-description {
-        max-width: 400px;
+        font-size: 95%;
+        padding-bottom: 4%;
     }
-    
-    
+    .More-box2 .More-title,
+    .More-box3 .More-title {
+        height: 7%;
+    }
+    .box1_frame {
+        width:100%;
+        padding-bottom: 4%;
+    }
+    .box2_frame,
+    .box3_frame {
+        width:100%;
+        height: 31%;
+    }
+    .More-box2,
+    .More-box3 {
+        height: 100%;
+    }
+
+
     /* Footer Section */
     .footer-content {
-        margin-left: 25px;
+        padding-left: 3%;
+        display: flex;
+        flex-direction: column;
     }
-    
-    
+    .rights p{
+        font-size: 70%;
+        text-align:center;
     }
-    
-    
-    
-    @media only screen and (max-width: 370px) {
-           
-        /* Projects Section */
-        .Projects-Title {
-            padding: 100px 180px 0px 0px;
-            margin: 100px 0px 0px 35px;
-        }
-        
-        
-        /* Experience Section */
-        .Experience-Title {
-            margin-left: 128px;
-        }
-          
-        
-        /* More Section */
-        .More-Title {
-            margin-left: 35px;
-            padding: 0px 220px 0px 0px;
-            margin: 100px 0px 0px 35px;
-        }
-        
-        
-        /* Footer Section */
-        .footer-content {
-            margin-left: 25px;
-        }
-        
+    .social-links {
+        display:flex;
+        flex-direction: row;
+        padding-top: 5%;
+        gap: 50%;
     }
-    @media only screen and (max-width: 390px) {
-        .announcement p{
-            width:90%;
-            margin-left: 0em;
-        }
+    .social-links a{
+        margin-left: 0px;
     }
-    @media only screen and (max-width: 400px) {
-        .announcement p{
-            width:90%;
-            margin-left: 0em;
-        }
+
+
+    /* Take to the Top Button */
+    #toTheTopButton {
+        right: 2.5%;
+        bottom: 7.5%;
     }
-    @media (min-width: 401px) and (max-width: 960px) {
-        .announcement p{
-            width:90%;
-            margin-left: 0em;
-        }
-      }
+}
+  
+
+@media (min-width: 446px) and (max-width: 900px) {
+    .announcement p{
+        width:80%;
+        margin-left: 0em;
+    }
+}
